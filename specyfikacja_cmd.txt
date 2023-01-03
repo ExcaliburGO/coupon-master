@@ -1,0 +1,16 @@
+Pierwszy wiersz:
+	liczba produktów P
+	liczba kuponów K
+
+Nastepne P wierszy:
+	Cena produktu C
+
+Nastepne K wierszy:
+	Rodzaj kuponu R:
+		"P"=procentowa obnizka
+		"K"=obnizka kwotowa
+	Wartosc obnizki W - liczba zmiennoprzecinkowa z kropka bedaca kwota obnizki lub wartoscia procentowa 0-100
+	Kwota minimalna do wykorzystania znizki M - liczba zmiennoprzecinkowa z kropka
+	Liczba L okreslajaca z iloma produktami mozna wykorzystac dany kupon
+	L liczb N okreslajacych numer produktu (od 1 do P) z ktorym mozna uzyc dany kupon
+
