@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulator</title>
+    <style>
+        .calcbtn {
+            background-color: black;
+            color: white;
+            font-size: 6vh;
+            width: 10vh;
+            height:10vh;
+            margin: 2vh;
+            line-height: 10vh;
+            text-align:center;
+            float:left;
+        }
+        .cb {
+            clear:both;
+        }
+        h2 {
+            display:block;
+            width:78vh;
+            height:10vh;
+            font-size:8vh;
+            line-height:10vh;
+            text-align:right;
+            border: 1vh solid black;
+            margin:0;
+            margin-left:2vh;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+    <div id="produkty">
+        Produkty:
+        <input type="button" value="dodaj produkt" onclick="add_product()"/><br>
+    </div>
+    <div id="kupony">
+        Kupony:
+        <input type="button" value="dodaj kupon" onclick="add_coupon()"/><br>
+    </div>
+    <input type="submit">
+    </form>
+    <script>
+        let produkt_i=0;
+        let kupon_i=0;
+        function add_product() {
+            produkt_i++;
+            document.getElementById("produkty").innerHTML += '<input type="text" required value="Produkt #'+produkt_i+'" name="nazwa'+produkt_i+'">\n<input type="number" required name="cena'+produkt_i+'" min="0" value="1" step="0.01"><br>';
+        }
+        function add_coupon() {
+            kupon_i++;
+            document.getElementById("kupony").innerHTML += '<input type="text" required value="Kupon#'+kupon_i+'" name="nazwa'+kupon_i+'">\n<label><input type="radio" name="rodzaj'+kupon_i+'"> Procentowo</label><label><input type="radio" name="rodzaj'+kupon_i+'"> Kwotowo</label><input type="number" required name="cena'+kupon_i+'" min="0" value="1" step="0.01"><input type="number" required name="kwotamin'+kupon_i+'" min="0" value="0" step="0.01"><br>';
+        }
+    </script>
+</body>
+</html>
